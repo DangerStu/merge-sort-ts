@@ -1,3 +1,7 @@
+//=======================================================================
+// not fully implemeted
+//
+
 import { Sorter } from "./Sorter";
 
 class Node {
@@ -5,6 +9,8 @@ class Node {
 
 	constructor(public data: number) {}
 }
+
+
 
 export class LinkedList extends Sorter<Node> {
 	head: Node | null = null;
@@ -86,5 +92,35 @@ export class LinkedList extends Sorter<Node> {
 			console.log(node.data);
 			node = node.next;
 		}
+	}
+
+	setCollection(collection: LinkedList): void {
+		// this.data = collection.data;
+	}
+
+	splitCollection(midPoint: number): { left: LinkedList; right: LinkedList } {
+		let left = new LinkedList(); //this.data.slice(0, midPoint));
+		let right = new LinkedList(); //this.data.slice(midPoint));
+		return { left, right };
+	}
+
+	getEmptyCollection(): LinkedList {
+		return new LinkedList(]);
+	}
+
+	addTail(val: Node): void {
+		//this.data.push(val);
+	}
+
+	removeHead(): any {
+		return this.head;
+	}
+
+	getHead(): Node|null {
+		return this.head;
+	}
+
+	combine(left: LinkedList, right: LinkedList): void {
+		//this.data = [...this.data, ...left.data, ...right.data];
 	}
 }
